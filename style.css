@@ -1,0 +1,34 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-top: 50px;
+    color: black; /* pour le texte */
+    position: relative;
+}
+/* Flouter uniquement l'image de fond */
+body::before {
+    content: "";
+    position: fixed;       /* couvre tout l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("image_mentorat.jpg"); /* ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);     /* flou de l'image */
+    z-index: -1;           /* derrière le contenu */
+}
+h1{
+    font-style: oblique;
+    font-size: 50px;
+}
+button {
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: auto;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+}
